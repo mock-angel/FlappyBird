@@ -19,5 +19,4 @@ public class PlayerScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 }

@@ -11,8 +11,8 @@ public class PlayerJump : MonoBehaviour
     void Update()
     {
 //        print("pressed");
-        if (Input.GetButton("Jump"))
-        {print("pressed");
+        if (Input.GetButton("Jump") || Input.touchCount > 0)
+        {
             GetComponent<Rigidbody2D>().AddForce(transform.up * thrust);
         }
     }
