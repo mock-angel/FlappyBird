@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    public GameObject gameOverScreen;
     
     // Update is called once per frame
-    void Update()
-    {
-        
+    void OnTriggerEnter2D(Collider2D collision){
+        print("runnign here");
+        if(collision.gameObject.tag == "walls")
+        {
+            gameOverScreen.SetActive(true);
+            Destroy(gameObject);
+        }
     }
+
 }
