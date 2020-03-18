@@ -13,7 +13,8 @@ public class PlayerJump : MonoBehaviour
 //        print("pressed");
         if (Input.GetButton("Jump") || Input.touchCount > 0)
         {
-            GetComponent<Rigidbody2D>().AddForce(transform.up * thrust);
+//            GetComponent<Rigidbody2D>().AddForce(transform.up * thrust);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 3f);
         }
     }
 }
